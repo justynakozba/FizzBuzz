@@ -15,7 +15,7 @@ namespace FizzBuzz
         {
             FizzBuzz victim = new FizzBuzz();
             int howMany = 20;
-            List<String> result = victim.Calculate(howMany);
+            List<String> result = victim.CalculateForNNumbers(howMany);
             Assert.AreEqual(howMany, result.Count());
         }
 
@@ -92,7 +92,7 @@ namespace FizzBuzz
         {
             FizzBuzz victim = new FizzBuzz();
             int howMany = 40;
-            List<String> result = victim.Calculate(howMany);
+            List<String> result = victim.CalculateForNNumbers(howMany);
             Assert.AreEqual("1", result[0]);
             Assert.AreEqual("2", result[1]);
             Assert.AreEqual("fizz", result[2]);
@@ -133,8 +133,52 @@ namespace FizzBuzz
             Assert.AreEqual("38", result[37]);
             Assert.AreEqual("fizz", result[38]);
             Assert.AreEqual("buzz", result[39]);
+        }
 
-
+        [Test]
+        public void test_thatTestCheckGivenNumber()
+        {
+            FizzBuzz victim = new FizzBuzz();
+            Assert.AreEqual("1", victim.checkNumber(1));
+            Assert.AreEqual("2", victim.checkNumber(2));
+            Assert.AreEqual("fizz", victim.checkNumber(3));
+            Assert.AreEqual("4", victim.checkNumber(4));
+            Assert.AreEqual("buzz", victim.checkNumber(5));
+            Assert.AreEqual("fizz", victim.checkNumber(6));
+            Assert.AreEqual("7", victim.checkNumber(7));
+            Assert.AreEqual("8", victim.checkNumber(8));
+            Assert.AreEqual("fizz", victim.checkNumber(9));
+            Assert.AreEqual("buzz", victim.checkNumber(10));
+            Assert.AreEqual("11", victim.checkNumber(11));
+            Assert.AreEqual("fizz", victim.checkNumber(12));
+            Assert.AreEqual("13", victim.checkNumber(13));
+            Assert.AreEqual("14", victim.checkNumber(14));
+            Assert.AreEqual("fizzbuzz", victim.checkNumber(15));
+            Assert.AreEqual("16", victim.checkNumber(16));
+            Assert.AreEqual("17", victim.checkNumber(17));
+            Assert.AreEqual("fizz", victim.checkNumber(18));
+            Assert.AreEqual("19", victim.checkNumber(19));
+            Assert.AreEqual("buzz", victim.checkNumber(20));
+            Assert.AreEqual("fizz", victim.checkNumber(21));
+            Assert.AreEqual("22", victim.checkNumber(22));
+            Assert.AreEqual("23", victim.checkNumber(23));
+            Assert.AreEqual("fizz", victim.checkNumber(24));
+            Assert.AreEqual("buzz", victim.checkNumber(25));
+            Assert.AreEqual("26", victim.checkNumber(26));
+            Assert.AreEqual("fizz", victim.checkNumber(27));
+            Assert.AreEqual("28", victim.checkNumber(28));
+            Assert.AreEqual("29", victim.checkNumber(29));
+            Assert.AreEqual("fizzbuzz", victim.checkNumber(30));
+            Assert.AreEqual("31", victim.checkNumber(31));
+            Assert.AreEqual("32", victim.checkNumber(32));
+            Assert.AreEqual("fizz", victim.checkNumber(33));
+            Assert.AreEqual("34", victim.checkNumber(34));
+            Assert.AreEqual("buzz", victim.checkNumber(35));
+            Assert.AreEqual("fizz", victim.checkNumber(36));
+            Assert.AreEqual("37", victim.checkNumber(37));
+            Assert.AreEqual("38", victim.checkNumber(38));
+            Assert.AreEqual("fizz", victim.checkNumber(39));
+            Assert.AreEqual("buzz", victim.checkNumber(40));
         }
     }
 }
